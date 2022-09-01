@@ -1,21 +1,86 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h1>Contact Form</h1>
-<form method ="POST">
-  {% csrf_token %}
-  <label for="name">Name</label>
-  <br>
-  <input type="text" name="name" id="name" placeholder="Enter your Name">
-  <br>
-  <label for="phone">Phone Number</label>
-  <br>
-  <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
-  <br>
-  <label for="note">Notes</label>
-  <br>
-  <input type="text" name="note" id="note" placeholder = "Enter your Special Requirments">
-  <br>
-  <input type="submit" value="Book an Appoinment">
-</form>
+<main id="main" data-aos="fade" data-aos-delay="1500">
+
+  <!-- ======= End Page Header ======= -->
+  <div class="page-header d-flex align-items-center">
+    <div class="container position-relative">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h2>Inquiry</h2>
+          <p>Looking for special occassion Mehndi at an Affordable Price!, You are at Perfect Place Connect now with us.</p>
+
+        </div>
+      </div>
+    </div>
+  </div><!-- End Page Header -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="row gy-4 justify-content-center">
+
+        <div class="col-lg-3">
+          <div class="info-item d-flex">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h4>Location:</h4>
+              <p>Bhimrad, Surat, Gujarat</p>
+            </div>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="col-lg-3">
+          <div class="info-item d-flex">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h4>Email:</h4>
+              <p>mehndidesigns4u@gmail.com</p>
+            </div>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="col-lg-3">
+          <div class="info-item d-flex">
+            <i class="bi bi-phone flex-shrink-0"></i>
+            <div>
+              <h4>Call:</h4>
+              <p>+91 7405676456/p>
+            </div>
+          </div>
+        </div><!-- End Info Item -->
+
+      </div>
+
+      <div class="row justify-content-center mt-4">
+
+        <div class="col-lg-9">
+          <form method="POST"  class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <label for="phone">Number</label>
+                <input type="number" class="form-control" name="phone" id="phone" place holder = "Number Only" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <label for="note">Notes</label>
+              <input type="text" class="form-control" name="note" id="note" placeholder="Enter Your function Notes" required>
+            </div>
+            <br>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div><!-- End Contact Form -->
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
 {% endblock body %}
